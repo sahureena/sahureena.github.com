@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/jquery.webui-popover.min.css" />
+  <script src="assets/jquery.webui-popover.min.js"> </script>
+
+  <style>
+.likebtn {
+  font-size: 40px;
+}
+
+.webui-popover-content{
+font-size:14px;
+}
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div id='myContent' class="webui-popover-content">
+    <p>
+      <span class="likebtn" onclick="showContent('🤔');">🤔</span>
+    </p>
+  </div>
+
+  <div>
+    <h1>This is popover test</h1>
+ <p>article to show how <a class="mc" id="pop1" href="#">popover</a> works and <a href="#" class="mc">another</a> one
+and <a href="#" class="mc">another</a> one
+ </p>
+
+
+
+
+
+</div>
+
+<div id="show_contentdiv">Content window</div>
+
+<script>
+
+function showContent(a){
+  document.getElementById('show_contentdiv').innerHTML = "<h1>"+ a + "</h1>";
+}
+
+$('.mc').webuiPopover({title:'Sample', content:'this is very long sentence <span class=likebtn>🤔</span>'});
+
+
+
+</script>
+</div>
+</body>
+</html>
